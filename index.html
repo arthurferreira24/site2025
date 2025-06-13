@@ -4,21 +4,197 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Guia de Consumo Consciente na Escola</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7dd5f556-e5fd-4523-8bee-67712dec9034.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        /* Reset e base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            color: #2c3e50;
+            background-color: #f9fafb;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover, a:focus {
+            color: #2196F3;
+            outline: none;
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            margin-top: 0;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgb(72 180 97 / 0.3);
+        }
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+            position: sticky;
+            top: 72px; /* altura do header */
+            z-index: 999;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0.75rem 1rem;
+            margin: 0;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav li {
+            position: relative;
+        }
+        nav a {
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 0.5rem;
+            display: inline-block;
+            border-radius: 6px;
+        }
+        nav a:focus-visible, nav a:hover {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+        }
+
+        /* Main e seções */
+        main {
+            flex-grow: 1;
+            max-width: 960px;
+            margin: 2rem auto 3rem;
+            padding: 0 1rem;
+            width: 100%;
+        }
+        section {
+            background-color: #ffffff;
+            padding: 2rem 2rem 2.5rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgb(0 0 0 / 0.08);
+            scroll-margin-top: 120px; /* para ancoragem confortável */
+        }
+
+        .section-image {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+            margin-bottom: 1.5rem;
+            user-select: none;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            color: #475569;
+            margin-bottom: 1em;
+        }
+        ul {
+            padding-left: 1.5rem;
+            list-style-type: disc;
+            max-width: 720px;
+        }
+        ul li {
+            margin-bottom: 0.6em;
+        }
+
+        /* Footer */
+        footer {
+            background: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1.25rem 1rem;
+            font-size: 0.95rem;
+            box-shadow: 0 -2px 10px rgb(72 180 97 / 0.3);
+            user-select: none;
+            margin-top: auto;
+        }
+
+        footer p + p {
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        /* Responsividade */
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            nav a {
+                font-size: 1.15rem;
+                padding: 0.75rem 1rem;
+            }
+            main {
+                margin: 1.5rem 1rem 2.5rem;
+            }
+            section {
+                padding: 1.5rem 1rem 1.75rem;
+                margin-bottom: 2rem;
+            }
+            .section-image {
+                max-height: 200px;
+            }
+        }
+
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Guia de Consumo Consciente na Escola</h1>
     </header>
 
-    <nav>
+    <nav aria-label="Menu principal">
         <ul>
             <li><a href="#o-que-e">O que é</a></li>
             <li><a href="#por-que-na-escola">Por que na escola</a></li>
@@ -30,13 +206,14 @@
     </nav>
 
     <main>
-        <section id="o-que-e">
+        <section id="o-que-e" tabindex="-1">
             <h2>O que é Consumo Consciente?</h2>
             <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f3cdc79a-7723-4b7d-8359-9bc741e68b7f.png"
-              alt="Ilustração colorida representando consumo consciente com símbolos de escola, reciclagem e natureza"
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d56f2545-c2b1-4c94-a2e2-587d9c3ace26.png"
+              alt="Foto realista de alunos aprendendo sobre consumo sustentável em sala de aula iluminada e moderna"
               class="section-image"
               loading="lazy"
+              onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e9405a9-e5d9-4188-b82e-4c30b717ca07.png';"
             />
             <p>
                 Consumo consciente é um ato de compra que leva em consideração
@@ -47,20 +224,21 @@
             <p><strong>Exemplos:</strong> Optar por produtos com embalagens recicláveis, comprar de empresas com práticas sustentáveis, evitar o desperdício de alimentos e energia.</p>
         </section>
 
-        <section id="por-que-na-escola">
+        <section id="por-que-na-escola" tabindex="-1">
             <h2>Por que o Consumo Consciente é Importante na Escola?</h2>
             <p>
                 A escola é um ambiente ideal para formar cidadãos conscientes e responsáveis. Ensinar sobre consumo consciente ajuda os alunos a entenderem o impacto de suas escolhas e a desenvolverem hábitos mais sustentáveis desde cedo.
             </p>
         </section>
 
-        <section id="praticas">
+        <section id="praticas" tabindex="-1">
             <h2>Práticas Sustentáveis no Dia a Dia Escolar</h2>
             <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ab6995de-b5f7-481f-afcb-746c2701cd1e.png"
-              alt="Imagem ilustrativa mostrando alunos reciclando papel e cuidando da natureza na escola"
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/84899719-0467-465e-aea5-ba3fd86f12a9.png"
+              alt="Foto realista de alunos reciclando papel e cuidando da natureza em ambiente escolar com luz natural"
               class="section-image"
               loading="lazy"
+              onerror="this.onerror=null;this.src='https://placehold.co/960x280/png?text=Imagem+indispon%C3%ADvel';"
             />
             <ul>
                 <li>Reduzir o uso de papel, utilizando materiais digitais sempre que possível.</li>
@@ -71,13 +249,14 @@
             </ul>
         </section>
 
-        <section id="projetos">
+        <section id="projetos" tabindex="-1">
             <h2>Ideias de Projetos e Campanhas</h2>
             <img
-              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca6da095-d944-41eb-bf17-116c332a49b1.png"
-              alt="Alunos realizando projeto escolar de horta e campanhas ambientais"
+              src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3f253400-9fdb-4104-9519-a450596d9af2.png"
+              alt="Foto realista mostrando alunos realizando projeto escolar de horta e campanhas ambientais"
               class="section-image"
               loading="lazy"
+              onerror="this.onerror=null;this.src='https://placehold.co/960x280/png?text=Imagem+indispon%C3%ADvel';"
             />
             <ul>
                 <li>Campanhas de conscientização sobre o uso de água e energia.</li>
@@ -87,14 +266,14 @@
             </ul>
         </section>
 
-        <section id="como-aplicar">
+        <section id="como-aplicar" tabindex="-1">
             <h2>Como Implementar um Guia de Consumo Consciente na Escola</h2>
             <p>
                 Para implementar um guia de consumo consciente na escola, é importante envolver toda a comunidade escolar: alunos, professores, funcionários e pais. Comece com um diagnóstico dos hábitos de consumo da escola e, em seguida, elabore um plano de ação com metas e atividades concretas.
             </p>
         </section>
 
-        <section id="beneficios">
+        <section id="beneficios" tabindex="-1">
             <h2>Benefícios de Ensinar Consumo Consciente para os Alunos</h2>
             <ul>
                 <li>Formação de cidadãos mais conscientes e responsáveis.</li>
@@ -105,7 +284,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>Escola do Futuro - 2024</p>
         <p>"Educar para transformar o mundo!"</p>
     </footer>
