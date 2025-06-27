@@ -1,292 +1,201 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Guia de Consumo Consciente na Escola</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Consumo Consciente Escolar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Reset e base */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            color: #2c3e50;
-            background-color: #f9fafb;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover, a:focus {
-            color: #2196F3;
-            outline: none;
-        }
-        h1, h2, h3 {
             font-family: 'Poppins', sans-serif;
-            margin-top: 0;
-            font-weight: 600;
-            color: #1e293b;
+            background-color: #f7fafc;
         }
-
-        h1 {
-            font-size: 2.5rem;
+        .hero {
+            background: linear-gradient(135deg, #4f46e5 0%, #312e81 100%);
         }
-        h2 {
-            font-size: 1.9rem;
-            margin-bottom: 1rem;
+        .eco-card {
+            transition: transform 0.3s ease;
         }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
-            color: white;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgb(72 180 97 / 0.3);
+        .eco-card:hover {
+            transform: translateY(-5px);
         }
-        header h1 {
-            margin: 0;
+        .recycle-icon {
+            background-color: #e0f2fe;
         }
-
-        /* Navegação */
-        nav {
-            background-color: #ffffff;
-            box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
-            position: sticky;
-            top: 72px; /* altura do header */
-            z-index: 999;
+        .food-icon {
+            background-color: #f0fdf4;
         }
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0.75rem 1rem;
-            margin: 0;
-            justify-content: center;
-            gap: 2rem;
-        }
-        nav li {
-            position: relative;
-        }
-        nav a {
-            font-weight: 700;
-            font-size: 1rem;
-            padding: 0.5rem;
-            display: inline-block;
-            border-radius: 6px;
-        }
-        nav a:focus-visible, nav a:hover {
-            background-color: #e3f2fd;
-            color: #0d47a1;
-        }
-
-        /* Main e seções */
-        main {
-            flex-grow: 1;
-            max-width: 960px;
-            margin: 2rem auto 3rem;
-            padding: 0 1rem;
-            width: 100%;
-        }
-        section {
-            background-color: #ffffff;
-            padding: 2rem 2rem 2.5rem;
-            margin-bottom: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgb(0 0 0 / 0.08);
-            scroll-margin-top: 120px; /* para ancoragem confortável */
-        }
-
-        .section-image {
-            width: 100%;
-            height: auto;
-            max-height: 280px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-            margin-bottom: 1.5rem;
-            user-select: none;
-        }
-
-        p, ul {
-            font-size: 1rem;
-            color: #475569;
-            margin-bottom: 1em;
-        }
-        ul {
-            padding-left: 1.5rem;
-            list-style-type: disc;
-            max-width: 720px;
-        }
-        ul li {
-            margin-bottom: 0.6em;
-        }
-
-        /* Footer */
-        footer {
-            background: #4caf50;
-            color: white;
-            text-align: center;
-            padding: 1.25rem 1rem;
-            font-size: 0.95rem;
-            box-shadow: 0 -2px 10px rgb(72 180 97 / 0.3);
-            user-select: none;
-            margin-top: auto;
-        }
-
-        footer p + p {
-            margin-top: 0.25rem;
-            font-style: italic;
-        }
-
-        /* Responsividade */
-        @media (max-width: 640px) {
-            header h1 {
-                font-size: 1.75rem;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-            nav a {
-                font-size: 1.15rem;
-                padding: 0.75rem 1rem;
-            }
-            main {
-                margin: 1.5rem 1rem 2.5rem;
-            }
-            section {
-                padding: 1.5rem 1rem 1.75rem;
-                margin-bottom: 2rem;
-            }
-            .section-image {
-                max-height: 200px;
-            }
-        }
-
-        /* Scroll suave */
-        html {
-            scroll-behavior: smooth;
+        .meal-icon {
+            background-color: #fef9c3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Guia de Consumo Consciente na Escola</h1>
+    <!-- Hero Section -->
+    <header class="hero text-white py-20 px-4 md:px-0">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Consumo Consciente na Escola</h1>
+            <p class="text-xl max-w-2xl mx-auto">Promovendo práticas sustentáveis e hábitos saudáveis em nosso ambiente escolar</p>
+        </div>
     </header>
 
-    <nav aria-label="Menu principal">
-        <ul>
-            <li><a href="#o-que-e">O que é</a></li>
-            <li><a href="#por-que-na-escola">Por que na escola</a></li>
-            <li><a href="#praticas">Práticas</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#como-aplicar">Como aplicar</a></li>
-            <li><a href="#beneficios">Benefícios</a></li>
-        </ul>
-    </nav>
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-6xl py-12 px-4">
+        <!-- Recycling Section -->
+        <section class="mb-20">
+            <div class="flex items-center mb-8">
+                <div class="recycle-icon p-3 rounded-full mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Coleta Seletiva e Reciclagem</h2>
+            </div>
 
-    <main>
-        <section id="o-que-e" tabindex="-1">
-            <h2>O que é Consumo Consciente?</h2>
-            <img
-              src="https://the-arthouse.org.uk/wp-content/uploads/2022/03/ECO_DAY_JULY2021-143-1.jpg"
-              alt="Foto realista de alunos aprendendo sobre consumo sustentável em sala de aula iluminada e moderna"
-              class="section-image"
-              loading="lazy"
-              onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e9405a9-e5d9-4188-b82e-4c30b717ca07.png';"
-            />
-            <p>
-                Consumo consciente é um ato de compra que leva em consideração
-                não apenas o preço e a qualidade do produto, mas também o
-                impacto ambiental e social da sua produção, distribuição e
-                descarte. Envolve escolhas informadas e responsáveis.
-            </p>
-            <p><strong>Exemplos:</strong> Optar por produtos com embalagens recicláveis, comprar de empresas com práticas sustentáveis, evitar o desperdício de alimentos e energia.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden eco-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/800x500" alt="Sala de aula com diversas lixeiras coloridas para coleta seletiva, mostrando recipientes para papel, plástico, metal e orgânico" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Situação Anterior</h3>
+                        <p class="text-gray-600">Antes da implementação de lixeiras específicas, a separação dos resíduos na escola era inadequada. Os materiais recicláveis eram descartados junto com o lixo comum, dificultando o processo de reciclagem.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden eco-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/800x500" alt="Funcionário escolar reponsável colocando sacos de lixo reciclável no caminhão de coleta seletiva no horário programado" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Processo Atual</h3>
+                        <p class="text-gray-600">Atualmente, o funcionário responsável pela coleta de lixo está ciente dos horários de coleta dos caminhões e realiza o encaminhamento dos sacos de lixo no momento adequado, respeitando a distinção entre o caminhão de lixo reciclável e o de lixo comum.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="por-que-na-escola" tabindex="-1">
-            <h2>Por que o Consumo Consciente é Importante na Escola?</h2>
-            <p>
-                A escola é um ambiente ideal para formar cidadãos conscientes e responsáveis. Ensinar sobre consumo consciente ajuda os alunos a entenderem o impacto de suas escolhas e a desenvolverem hábitos mais sustentáveis desde cedo.
-            </p>
+        <!-- Food Menu Section -->
+        <section class="mb-20">
+            <div class="flex items-center mb-8">
+                <div class="food-icon p-3 rounded-full mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Cardápio Escolar Saudável</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden eco-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/800x500" alt="Variedade de alimentos saudáveis dispostos em bandejas escolares incluindo frutas, legumes e grãos integrais" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Diretrizes Alimentares</h3>
+                        <p class="text-gray-600">A escola adota restrições alimentares que priorizam a saúde dos estudantes. Alimentos excessivamente fritos ou que possam prejudicar o bem-estar dos alunos são proibidos. A FUNDEPAR é a instituição responsável pelo envio dos alimentos ao colégio.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md overflow-hidden eco-card">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://placehold.co/800x500" alt="Diretora e secretária planejando o cardápio semanal com documentos e alimentos frescos sobre a mesa" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Organização do Cardápio</h3>
+                        <p class="text-gray-600">A diretora e a secretária organizam o cardápio escolar com base nos itens recebidos. Semanalmente, a escola recebe frutas e verduras frescas, enquanto os alimentos secos são entregues no início de cada mês.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="praticas" tabindex="-1">
-            <h2>Práticas Sustentáveis no Dia a Dia Escolar</h2>
-            <img
-              src="https://th.bing.com/th/id/OIP.Ugt5o2pRnVguHVKHFzozNgHaFS?w=229&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
-              alt="Foto realista de alunos reciclando papel e cuidando da natureza em ambiente escolar com luz natural"
-              class="section-image"
-              loading="lazy"
-              onerror="this.onerror=null;this.src='https://placehold.co/960x280/png?text=Imagem+indispon%C3%ADvel';"
-            />
-            <ul>
-                <li>Reduzir o uso de papel, utilizando materiais digitais sempre que possível.</li>
-                <li>Reciclar materiais como papel, plástico e metal.</li>
-                <li>Economizar água e energia.</li>
-                <li>Promover o consumo de alimentos saudáveis e produzidos localmente.</li>
-                <li>Evitar o desperdício de alimentos no refeitório.</li>
-            </ul>
-        </section>
+        <!-- Meals Section -->
+        <section>
+            <div class="flex items-center mb-8">
+                <div class="meal-icon p-3 rounded-full mr-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800">Refeições Diárias</h2>
+            </div>
 
-        <section id="projetos" tabindex="-1">
-            <h2>Ideias de Projetos e Campanhas</h2>
-            <img
-              src="https://th.bing.com/th/id/OIP.Hb_MPPKYy976a1g2MFu7FgAAAA?r=0&w=403&h=205&rs=1&pid=ImgDetMain"
-              alt="Foto realista mostrando alunos realizando projeto escolar de horta e campanhas ambientais"
-              class="section-image"
-              loading="lazy"
-              onerror="this.onerror=null;this.src='https://placehold.co/960x280/png?text=Imagem+indispon%C3%ADvel';"
-            />
-            <ul>
-                <li>Campanhas de conscientização sobre o uso de água e energia.</li>
-                <li>Criação de hortas escolares para o cultivo de alimentos orgânicos.</li>
-                <li>Feiras de troca de livros e brinquedos.</li>
-                <li>Oficinas de reciclagem e reaproveitamento de materiais.</li>
-            </ul>
-        </section>
-
-        <section id="como-aplicar" tabindex="-1">
-            <h2>Como Implementar um Guia de Consumo Consciente na Escola</h2>
-            <p>
-                Para implementar um guia de consumo consciente na escola, é importante envolver toda a comunidade escolar: alunos, professores, funcionários e pais. Comece com um diagnóstico dos hábitos de consumo da escola e, em seguida, elabore um plano de ação com metas e atividades concretas.
-            </p>
-        </section>
-
-        <section id="beneficios" tabindex="-1">
-            <h2>Benefícios de Ensinar Consumo Consciente para os Alunos</h2>
-            <ul>
-                <li>Formação de cidadãos mais conscientes e responsáveis.</li>
-                <li>Redução do impacto ambiental da escola.</li>
-                <li>Promoção de hábitos mais saudáveis e sustentáveis.</li>
-                <li>Desenvolvimento de habilidades de pensamento crítico e resolução de problemas.</li>
-            </ul>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden max-w-2xl mx-auto eco-card">
+                <div class="h-48 overflow-hidden">
+                    <img src="https://placehold.co/800x500" alt="Alunos felizes compartilhando refeições saudáveis no refeitório escolar durante o intervalo" class="w-full h-full object-cover" />
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-3">Quantidade e Distribuição</h3>
+                    <p class="text-gray-600 mb-4">A escola oferece um total de sete refeições ao longo do dia, cuidadosamente planejadas para atender às necessidades nutricionais dos alunos.</p>
+                    
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <span class="bg-blue-100 text-blue-800 rounded-full p-1 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span>Dois intervalos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-blue-100 text-blue-800 rounded-full p-1 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span>Duas entradas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-blue-100 text-blue-800 rounded-full p-1 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span>Duas saídas</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="bg-blue-100 text-blue-800 rounded-full p-1 mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                            <span>Um almoço</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
-        <p>Helena Viana Sundim - 2025</p>
-        <p>"Educar para transformar o mundo!"</p>
+    <!-- Call to Action -->
+    <section class="bg-indigo-50 py-16">
+        <div class="container mx-auto max-w-6xl text-center px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Juntos por uma Escola mais Sustentável</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">A implementação de práticas de consumo consciente na escola são passos importantes para a formação de uma comunidade escolar mais sustentável e saudável.</p>
+            <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                Saiba Mais
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto max-w-6xl px-4 text-center">
+            <p>© 2023 Guia de Consumo Consciente Escolar. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script>
+        // Simple JavaScript for interactive elements
+        document.querySelectorAll('.eco-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const content = card.querySelector('p');
+                if (content) {
+                    content.classList.toggle('line-clamp-3');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
