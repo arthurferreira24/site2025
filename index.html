@@ -1,119 +1,97 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alimentação Escolar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(to bottom, #fdfbfb, #ebedee);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #4caf50;
-            margin-bottom: 10px;
-        }
-
-        p.subtitle {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        section {
-            background: white;
-            padding: 25px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        h2 {
-            color: #388e3c;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        img {
-            max-width: 100%;
-            border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        img:hover {
-            transform: scale(1.03);
-        }
-
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio Escolar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f2f2f2, #e6f2ff);
+      color: #333;
+    }
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1, h2 {
+      color: #2e7d32;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 1rem 0;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Alimentação Escolar</h1>
-        <p class="subtitle">Compromisso com o bem-estar dos nossos estudantes</p>
-    </header>
-
+  <header>
+    <h1>Cardápio Escolar Detalhado</h1>
+    <p>Confira as refeições oferecidas diariamente na escola</p>
+  </header>
+  <main>
     <section>
-        <h2>Horários das Refeições</h2>
-        <p>As refeições são distribuídas nos seguintes horários:</p>
-        <ul>
-            <li><strong>Turno Matutino:</strong> 09h às 09h15</li>
-            <li><strong>Turno Vespertino:</strong> 15h às 15h15</li>
-        </ul>
+      <h2>Horários e refeições servidas</h2>
+      <ul>
+        <li>1ª refeição (7h): café da manhã</li>
+        <li>2ª refeição (9h): lanche da manhã</li>
+        <li>3ª refeição (11h): almoço</li>
+        <li>4ª refeição (13h30): lanche da tarde</li>
+        <li>5ª refeição (15h30): jantar</li>
+        <li>6ª refeição (18h): ceia</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1598514982846-4c7b54d0e540" alt="Bandeja com alimentos escolares">
     </section>
-
     <section>
-        <h2>Quantidade de Refeições Servidas</h2>
-        <p>Diariamente, servimos:</p>
-        <ul>
-            <li><strong>Matutino:</strong> Aproximadamente 400 refeições</li>
-            <li><strong>Vespertino:</strong> Aproximadamente 350 refeições</li>
-        </ul>
-        <img src="https://educador.brasilescola.uol.com.br/upload/e/alimentacao-escolar-ensino-fundamental.jpg" alt="Refeição escolar sendo servida">
+      <h2>Divisão por turno</h2>
+      <p><strong>Turno matutino:</strong> recebe 3 refeições: café da manhã, lanche da manhã e almoço.</p>
+      <p><strong>Turno vespertino:</strong> recebe 3 refeições: almoço, lanche da tarde e jantar.</p>
+      <p><strong>Turno integral:</strong> recebe as 6 refeições diárias, incluindo a ceia.</p>
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Refeição equilibrada com frutas e cereais">
     </section>
-
     <section>
-        <h2>Programa Mais Merenda</h2>
-        <p>Este programa oferece um reforço alimentar no contraturno, especialmente para os alunos do programa de reforço escolar. Itens servidos incluem:</p>
-        <ul>
-            <li>Achocolatado</li>
-            <li>Rosquinhas</li>
-            <li>Bolacha recheada</li>
-            <li>Suco de fruta</li>
-            <li>Pão doce</li>
-        </ul>
-        <img src="https://s2-g1.glbimg.com/6dRmSY9FlTj3i0gEZPGsDK6rLcs=/0x0:1024x683/984x0/smart/filters:strip_icc():strip_exif()/s01.video.glbimg.com/x720/11476810.jpg" alt="Lanches do Programa Mais Merenda">
+      <h2>Programa Mais Merenda</h2>
+      <p>O programa Mais Merenda atende os alunos da educação infantil, ensino fundamental I e II, e da Educação de Jovens e Adultos (EJA). Ele garante a alimentação em todas as etapas do dia escolar.</p>
+      <p>As refeições são balanceadas e supervisionadas por nutricionistas, promovendo uma alimentação saudável e adequada ao público escolar.</p>
+      <ul>
+        <li>Frutas frescas e da estação</li>
+        <li>Cereais integrais e pães</li>
+        <li>Preparações com carne, ovos e leguminosas</li>
+        <li>Sucos naturais e leite</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Alimentos nutritivos servidos na escola">
     </section>
+  </main>
 </body>
 </html>
