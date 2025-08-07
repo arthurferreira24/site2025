@@ -3,95 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cardápio Escolar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Rotina Alimentar - Escola Helena Viana Sundim</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #f2f2f2, #e6f2ff);
+      background: #f2f2f2;
       color: #333;
+      line-height: 1.6;
+      animation: fadeIn 1.5s ease;
     }
     header {
-      background-color: #4caf50;
+      background: #0066cc;
       color: white;
-      padding: 1rem;
+      padding: 20px 0;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: slideDown 1s ease-in-out;
     }
-    main {
+    .container {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      animation: fadeIn 1s ease-in-out;
+      margin: 20px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
-    h1, h2 {
-      color: #2e7d32;
+    h2 {
+      color: #0066cc;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 5px;
     }
-    section {
-      margin-bottom: 2rem;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
+    .refeicao {
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease forwards;
     }
     img {
-      max-width: 100%;
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin: 1rem 0;
-      transition: transform 0.3s ease;
-    }
-    img:hover {
-      transform: scale(1.05);
+      margin-top: 10px;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Cardápio Escolar Detalhado</h1>
-    <p>Confira as refeições oferecidas diariamente na escola</p>
+    <h1>Rotina Alimentar Escolar</h1>
+    <h2>Escola Helena Viana Sundim</h2>
   </header>
-  <main>
+  <div class="container">
     <section>
-      <h2>Horários e refeições servidas</h2>
-      <ul>
-        <li>1ª refeição (7h): café da manhã</li>
-        <li>2ª refeição (9h): lanche da manhã</li>
-        <li>3ª refeição (11h): almoço</li>
-        <li>4ª refeição (13h30): lanche da tarde</li>
-        <li>5ª refeição (15h30): jantar</li>
-        <li>6ª refeição (18h): ceia</li>
-      </ul>
-      <img src="https://images.unsplash.com/photo-1598514982846-4c7b54d0e540" alt="Bandeja com alimentos escolares">
+      <h2>Importância da Alimentação Escolar</h2>
+      <p>A alimentação escolar é essencial para garantir o bom desenvolvimento físico e mental dos alunos. Uma rotina alimentar bem estruturada oferece os nutrientes necessários para que as crianças cresçam com saúde, aprendam melhor e tenham energia para brincar e se desenvolver plenamente. Na Escola Helena Viana Sundim, a merenda é pensada com muito carinho para atender essas necessidades.</p>
     </section>
+
     <section>
-      <h2>Divisão por turno</h2>
-      <p><strong>Turno matutino:</strong> recebe 3 refeições: café da manhã, lanche da manhã e almoço.</p>
-      <p><strong>Turno vespertino:</strong> recebe 3 refeições: almoço, lanche da tarde e jantar.</p>
-      <p><strong>Turno integral:</strong> recebe as 6 refeições diárias, incluindo a ceia.</p>
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Refeição equilibrada com frutas e cereais">
+      <h2>Divisão das Refeições</h2>
+      <p>As refeições na escola estão divididas entre manhã e tarde, considerando a jornada de cada turno. A seguir, apresentamos a rotina completa das 6 refeições que compõem o dia alimentar das crianças.</p>
+
+      <div class="refeicao">
+        <h3>1. Café da manhã</h3>
+        <p>Servido logo no início do dia para garantir energia e disposição aos alunos. Inclui itens como pão com margarina, frutas (como banana ou maçã) e leite com achocolatado.</p>
+        <img src="https://images.unsplash.com/photo-1505253210343-d9ad5e91f0f5" alt="Café da manhã escolar">
+      </div>
+
+      <div class="refeicao">
+        <h3>2. Lanche da manhã</h3>
+        <p>Servido por volta das 9h ou 10h, como uma forma de manter a saciedade e energia entre as aulas. Costuma conter bolacha de sal ou doce e suco natural ou refresco.</p>
+        <img src="https://images.unsplash.com/photo-1622001682973-ec607b1cfbbd" alt="Lanche da manhã">
+      </div>
+
+      <div class="refeicao">
+        <h3>3. Almoço</h3>
+        <p>Refeição principal do dia, servida aos alunos que permanecem em tempo integral. Inclui arroz, feijão, proteína (como carne moída, frango ou ovo), salada e legumes cozidos. Essa refeição é essencial para fornecer ferro, proteínas e energia para o resto do dia.</p>
+        <img src="https://images.unsplash.com/photo-1633543040774-0175e5cdb9e1" alt="Almoço escolar">
+      </div>
+
+      <div class="refeicao">
+        <h3>4. Lanche da tarde</h3>
+        <p>Servido por volta das 15h. Composto por frutas, biscoitos ou pães simples acompanhados de bebida (suco ou leite), ajuda a manter a energia até o fim das aulas.</p>
+        <img src="https://images.unsplash.com/photo-1583511666445-775f1f2116a0" alt="Lanche da tarde">
+      </div>
+
+      <div class="refeicao">
+        <h3>5. Jantar</h3>
+        <p>Refeição dos alunos do período noturno ou que permanecem até mais tarde. Geralmente inclui uma refeição semelhante ao almoço, adaptada com opções mais leves, como arroz, frango desfiado e vegetais.</p>
+        <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb46" alt="Jantar escolar">
+      </div>
+
+      <div class="refeicao">
+        <h3>6. Ceia</h3>
+        <p>Refeição leve para os alunos que ainda permanecem após o jantar. Pode incluir bolachas, leite ou frutas. Ajuda a manter o conforto até a chegada em casa.</p>
+        <img src="https://images.unsplash.com/photo-1624026305700-c3322c0aa9f4" alt="Ceia escolar">
+      </div>
     </section>
+
     <section>
-      <h2>Programa Mais Merenda</h2>
-      <p>O programa Mais Merenda atende os alunos da educação infantil, ensino fundamental I e II, e da Educação de Jovens e Adultos (EJA). Ele garante a alimentação em todas as etapas do dia escolar.</p>
-      <p>As refeições são balanceadas e supervisionadas por nutricionistas, promovendo uma alimentação saudável e adequada ao público escolar.</p>
-      <ul>
-        <li>Frutas frescas e da estação</li>
-        <li>Cereais integrais e pães</li>
-        <li>Preparações com carne, ovos e leguminosas</li>
-        <li>Sucos naturais e leite</li>
-      </ul>
-      <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Alimentos nutritivos servidos na escola">
+      <h2>Mais Merenda</h2>
+      <p>O programa "Mais Merenda" oferece reforço alimentar para os alunos, com foco especial em garantir nutrição adequada a todos. Durante esse momento, podem ser servidos alimentos variados como frutas frescas, sucos, bolos caseiros e preparações feitas com ingredientes naturais. O objetivo é complementar a nutrição e reduzir os índices de evasão e desnutrição escolar.</p>
     </section>
-  </main>
+
+    <section>
+      <h2>Conclusão</h2>
+      <p>A rotina alimentar na Escola Helena Viana Sundim vai muito além da simples oferta de refeições. É um compromisso com a saúde, o bem-estar e o futuro de cada estudante. Alimentar bem é cuidar com amor, e aqui essa missão é levada a sério todos os dias.</p>
+    </section>
+  </div>
 </body>
 </html>
